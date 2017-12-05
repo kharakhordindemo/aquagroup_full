@@ -1,0 +1,35 @@
+//Fonts
+$bold-font: 'opensans-bold', 'Arial', sans-serif;
+$semibold-font: 'opensans-semibold', 'Arial', sans-serif;
+$regular-font: 'opensans-regular', 'Arial', sans-serif;
+$light-font: 'opensans-light', 'Arial', sans-serif;
+
+//Colors
+$text-color: #777;
+$white-color: #fff;
+$black-color: #222;
+$blue-color: #3283C7;
+$blue-middle-color: #2d6bae;
+$blue-dark-color: #28334D;
+$grey-color: #D1D5D8;
+$grey-light-color: #EFEFEF;
+$grey-dark-color: #a8acaf;
+$green-color: #29BB9C;
+$green-light-color: #2ccaa9;
+$green-dark-color: #19A785;
+$accent-color: #F9C436;
+$accent-light-color: #f6d045;
+$accent-dark-color: #eea216;
+$red-color: #e33939;
+
+//Mixins
+@mixin ul-reset{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@mixin tr($time){
+    transition: all $time ease;
+}
+

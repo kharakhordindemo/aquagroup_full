@@ -1,0 +1,420 @@
+body{
+    position: relative;
+    min-width: 320px;
+    font-family: $regular-font;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-x: hidden;
+    background-color: $white-color;
+    color: $black-color;
+}
+
+//Base
+*{
+    outline: none !important;
+}
+
+.hidden{
+    display: none;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited{
+    text-decoration: none;
+}
+
+//Icons
+.icon{
+    font-family: 'iconset';
+    font-size: 20px;
+    font-style: normal;
+    text-rendering: auto;
+    text-transform: none;
+    color: $black-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font: grayscale;
+}
+
+.icon.a::before{
+    content: 'a';
+}
+
+.icon.b::before{
+    content: 'b';
+}
+
+.icon.c::before{
+    content: 'c';
+}
+
+.icon.d::before{
+    content: 'd';
+}
+
+.icon.e::before{
+    content: 'e';
+}
+
+.icon.f::before{
+    content: 'f';
+}
+
+.icon.g::before{
+    content: 'g';
+}
+
+//Headers
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-family: $light-font;
+    font-weight: normal;
+}
+
+.titles{
+    font-size: 36px;
+    text-align: center;
+        
+    @media only screen and (max-width : 767px){
+        font-size: 30px;
+    }
+    
+}
+
+//Buttons
+.button-wrapp{
+    text-align: center;
+}
+
+.buttons{
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    font-size: 16px;
+    font-family: $semibold-font;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: $green-color;
+    color: $white-color;
+    box-shadow: 0 3px 0 $green-dark-color;
+    @include tr(0.5s);
+    
+    &:hover{
+        color: $white-color;
+        background-color: $green-light-color;
+    }
+    
+    &:focus,
+    &:active{
+        color: $white-color;
+        background-color: $green-dark-color;
+        transform: translateY(2px);
+    }
+    
+}//.buttons
+
+.btn-orange{
+    background-color: $accent-color;
+    box-shadow: 0 3px 0 $accent-dark-color;
+    
+    &:hover{
+        background-color: $accent-light-color;
+    }
+    
+    &:focus,
+    &:active{
+        background-color: $accent-dark-color;
+    }
+    
+}
+
+//Forms
+.contact-form{
+    padding: 0 20px 40px 20px;
+    text-align: center;
+    background-color: $blue-dark-color;
+    color: $white-color;
+    border-radius: 3px;
+    
+    .form-wrapper{
+        display: inline-block;
+        margin-top: -25px;
+        padding: 18px 0;
+        width: 90%;
+        background-color: $green-dark-color;
+        box-shadow: inset 0 0 0 3px $grey-color;
+        border-radius: 3px;
+        
+        .form-title{
+            font-size: 18px;
+            font-family: $semibold-font;
+            text-transform: uppercase;
+        }
+        
+    }//.form-wrapper
+    
+    .form-descr{
+        margin: 20px 0 20px 0;
+        font-family: $light-font;
+    }
+    
+    span{
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        font-size: 18px;
+    }
+    
+    input{
+        margin-bottom: 20px;
+        padding: 0 10px;
+        width: 100%;
+        height: 44px;
+        font-family: $semibold-font;
+        color: $blue-dark-color;
+        border: none;
+        background-color: $grey-color;
+        border-radius: 2px;
+        text-transform: uppercase;
+        @include tr(0.5s);
+        
+        &:focus{
+            background-color: $grey-light-color;
+            box-shadow: inset 0 0 0 2px $accent-dark-color;
+        }
+        
+        &:focus:required:valid{
+            box-shadow: inset 0 0 0 2px $accent-dark-color;
+        }
+
+        &:focus:required:invalid{
+            box-shadow: inset 0 0 0 2px $red-color;
+        }
+        
+    }
+    
+    .form-btn{
+        margin-top: 25px;
+    }
+    
+}//.contact-form
+
+//Placeholder
+*::-webkit-input-placeholder{
+    font-family: $regular-font;
+    text-transform: none;
+    color: $text-color;
+    opacity: 0.6;
+}
+
+*:-moz-placeholder{
+    font-family: $regular-font;
+    text-transform: none;
+    color: $text-color;
+    opacity: 0.6;
+}
+
+
+*::-moz-placeholder{
+    font-family: $regular-font;
+    text-transform: none;
+    color: $text-color;
+    opacity: 0.6;
+}
+
+*:-ms-input-placeholder{
+    font-family: $regular-font;
+    text-transform: none;
+    color: $text-color;
+    opacity: 0.6;
+}
+
+//Menu
+.menu-line{
+    padding: 35px 0;
+    
+    @media only screen and (max-width : 767px){
+        text-align: center;
+    }
+    
+    .logo{
+        display: block;
+        width: 160px;
+        
+        @media only screen and (max-width : 767px){
+            display: inline-block;
+        }
+        
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }//.logo
+    
+    .main-menu{
+        text-align: center;
+        
+        ul{
+            @include ul-reset;
+        
+            li{
+                display: inline-block;
+                
+                a{
+                    display: block;
+                    padding: 13px 20px;
+                    font-size: 14px;
+                    font-family: $semibold-font;
+                    text-transform: uppercase;
+                    color: $blue-dark-color;
+                    @include tr(0.5s);
+                    
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        color: $white-color;
+                        text-decoration: none;
+                    }
+                    
+                }//a
+                
+            }//li
+        
+        }//ul
+        
+    }//.main-menu
+    
+    .phone{
+        margin: 0;
+        text-align: right;
+        font-family: $bold-font;
+        font-size: 21px;
+        text-transform: uppercase;
+        color: $blue-dark-color;
+        
+        @media only screen and (max-width : 1199px){
+            padding-right: 50px;
+        }
+        
+        @media only screen and (max-width : 767px){
+            padding: 0;
+            text-align: center;
+        }
+        
+        .phone-icon{
+            position: relative;
+            top: 3px;
+            font-size: 28px;
+            color: $white-color;
+        }
+        
+    }//.phone
+    
+    //Toggle-menu(base)
+    .toggle-menu{
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin-top: 14px;
+    }
+
+    .toggle-menu span:after,
+    .toggle-menu span:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+
+    .toggle-menu span:after{
+        top: 18px;
+    }
+
+    .toggle-menu span{
+        position: relative;
+        display: block;
+    }
+
+    .toggle-menu span,
+    .toggle-menu span:after,
+    .toggle-menu span:before{
+        width: 100%;
+        height: 2px;
+        background-color: $white-color;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+
+    .toggle-menu.on span{
+        background-color: transparent;
+    }
+
+    .toggle-menu.on span:before{
+        transform: rotate(45deg) translate(-1px, 0px);
+    }
+
+    .toggle-menu.on span:after{
+        transform: rotate(-45deg) translate(6px, -7px);
+    }
+
+    .toggle-menu.on + #menu{
+        opacity: 1;
+        visibility: visible;
+    }
+    //Toggle-menu(base) End
+    
+    //Toggle-menu(custom)
+    .toggle-menu{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        
+        @media only screen and (max-width : 767px){
+            top: -50px;
+        }
+        
+    }
+    //Toggle-menu(custom) End
+    
+    .hidden-menu{
+        position: relative;
+        top: 15px;
+        display: none;
+        background-color: $grey-color;
+        
+        ul{
+            
+            li{
+                display: block;
+                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                
+                &:first-child{
+                    border-top: none;
+                }
+                
+                a{
+                    color: $blue-dark-color;
+                    @include tr(0.5s);
+                    
+                    &:hover,
+                    &:active,
+                    &:focus{
+                        background-color: $grey-dark-color;
+                    }
+                    
+                }
+                
+            }//li
+            
+        }//ul
+        
+    }//.hidden-menu
+    
+}//.menu-line
+
+.frame{
+    padding: 70px 0;
+}
